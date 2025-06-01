@@ -22,18 +22,8 @@ This template demonstrates a fully decoupled Android app structure using Jetpack
 
 ### 🧩 Modularization Structure
 
-├── build-logic/            # Custom Gradle plugins and shared build logic
-├── core/                   # Central shared modules (not features)
-│   ├── datastore/          # Handles DataStore setup and access
-│   ├── network/            # Handles Retrofit, API interfaces, and interceptors
-│   ├── domain/             # Business logic contracts and usecases
-│   └── common/             # Shared model classes (DTOs), utilities, constants
-├── data/                   # Repositories combining data from core modules
-├── designsystem/           # App-wide color palette, typography, and themes
-├── uicomponents/           # Reusable composables built on top of design system
-├── feature1/               # Feature 1 - screens, viewmodels, navigation
-├── feature2/               # Feature 2 - screens, viewmodels, navigation
-└── app/                    # Entry point, injects features and applies theme
+![image](https://github.com/user-attachments/assets/abd4a18c-cb91-4bba-bb90-a43ccff0143b)
+
 
 ### 📂 Layer Breakdown
 
@@ -46,11 +36,13 @@ Promotes DRY (Don't Repeat Yourself) principles for build scripts.
 
 ## core/
  
-network/:Retrofit setup, API interfaces, interceptors, and network config.
+## network/
+Retrofit setup, API interfaces, interceptors, and network config.
 
-datastore/: DataStore instance and related getters/setters for persistent storage.
+## datastore/
+DataStore instance and related getters/setters for persistent storage.
 
- data/
+## data/
 Connects with both network and datastore to provide data to the app.
 
 Hosts repositories that abstract data sources and expose data to the domain layer.
@@ -58,30 +50,32 @@ Depends on:
 network/
 datastore/
 
-domain/
+## domain/
 Pure Kotlin modules with no Android dependencies.
 
 Contains use cases that wrap around repositories and apply business logic.
 Depends on:
 data/
 
-common/
+## common/
 Shared utility classes and model definitions.
 
 Promotes reuse across all modules.
 
-designsystem/
+## designsystem/
 Centralized color definitions, typography, and theme support (including dark mode).
 
 Ensures consistent UI across modules.
 
-uicomponents/
+## uicomponents/
 Contains reusable Composable UI components (buttons, cards, etc.).
 Built on top of the designsystem.
 Depends on:
 designsystem/
 
-feature1/ & feature2/
+## feature/ 
+
+## feature1/ & feature2/
 Self-contained features including:
 Navigation graph
 Screens
@@ -94,7 +88,7 @@ common/
 uicomponents/
 designsystem/
 
-📱 app/
+## 📱 app/
 Main entry point of the application.
 
 Injects and assembles all features.
@@ -106,7 +100,7 @@ plaintext
 Copy
 Edit
 
-## ✅ Advantages of This Approach
+### ✅ Advantages of This Approach
 🔄 Separation of Concerns: Each module has a single responsibility.
 
 🚀 Scalability: Easy to add new features without affecting existing ones.
@@ -117,14 +111,14 @@ Edit
 
 📐 Maintainability: Isolated modules reduce the risk of code conflicts.
 
-## ⚠️ Disadvantages
+### ⚠️ Disadvantages
 📁 Initial Complexity: The learning curve for beginners can be steep.
 
 🕸️ Overhead for Small Projects: Might be overkill for simple apps.
 
 ⏱️ Setup Time: Setting up modules and wiring dependencies takes time.
 
-## 🛠️ How to Clone and Use
+### 🛠️ How to Clone and Use
 bash
 Copy
 Edit
