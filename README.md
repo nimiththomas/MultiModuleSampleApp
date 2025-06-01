@@ -92,20 +92,12 @@ Applies theming via the design system.
 * Setup Time: Setting up modules and wiring dependencies takes time.
 
 ### 🛠️ How to Clone and Use
-bash
-Copy
-Edit
-git clone https://github.com/nimiththomas/MultiModuleSampleApp.git
-Open in Android Studio
-Open Android Studio.
-
-Choose "Open an existing project".
-
-Navigate to the cloned directory.
-
-Let Gradle sync complete.
-
-Build & Run
-Select the app module.
-
-Hit Run ▶️ on your emulator/device.
+* git clone https://github.com/nimiththomas/MultiModuleSampleApp.git
+* Open in Android Studio
+* Open Android Studio.
+* Choose "Open an existing project".
+* Navigate to the cloned directory.
+* Let Gradle sync complete.
+* Build & Run
+* Select the app module.
+* Hit Run ▶️ on your emulator/device.
