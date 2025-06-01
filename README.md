@@ -5,23 +5,15 @@ A modular, scalable, and maintainable Android project template built using moder
 This template demonstrates a fully decoupled Android app structure using Jetpack Compose, Kotlin, and modern Android development tools. The goal is to showcase a clean architecture pattern with separation of concerns, making development, testing, and scaling easier for complex Android apps.
 
 ### Technologies used:
-
-🧑‍💻 Kotlin
-
-🧱 Jetpack Compose
-
-🌐 Retrofit (for network calls)
-
-📦 Jetpack DataStore (for local persistence)
-
-🧭 Compose Navigation 2
-
-⚙️ Coroutines (for async operations)
-
-🌒 Dark Mode Support
+* Kotlin
+* Jetpack Compose
+* Retrofit (for network calls)
+* Jetpack DataStore (for local persistence)
+* Compose Navigation 2
+* Coroutines (for async operations)
+*Dark Mode Support
 
 ### 🧩 Modularization Structure
-
 ![image](https://github.com/user-attachments/assets/abd4a18c-cb91-4bba-bb90-a43ccff0143b)
 
 
@@ -29,9 +21,7 @@ This template demonstrates a fully decoupled Android app structure using Jetpack
 
 ## build-logic/
 Contains custom Gradle plugins to simplify setup across modules.
-
 Centralizes build configuration (e.g., Kotlin/Compose compiler settings, dependency versions).
-
 Promotes DRY (Don't Repeat Yourself) principles for build scripts.
 
 ## core/
@@ -44,7 +34,6 @@ DataStore instance and related getters/setters for persistent storage.
 
 ## data/
 Connects with both network and datastore to provide data to the app.
-
 Hosts repositories that abstract data sources and expose data to the domain layer.
 Depends on:
 network/
@@ -52,19 +41,16 @@ datastore/
 
 ## domain/
 Pure Kotlin modules with no Android dependencies.
-
 Contains use cases that wrap around repositories and apply business logic.
 Depends on:
 data/
 
 ## common/
 Shared utility classes and model definitions.
-
 Promotes reuse across all modules.
 
 ## designsystem/
 Centralized color definitions, typography, and theme support (including dark mode).
-
 Ensures consistent UI across modules.
 
 ## uicomponents/
@@ -90,33 +76,20 @@ designsystem/
 
 ## 📱 app/
 Main entry point of the application.
-
 Injects and assembles all features.
-
 Applies theming via the design system.
 
-🗺️ Modular Architecture Diagram
-plaintext
-Copy
-Edit
 
 ### ✅ Advantages of This Approach
-🔄 Separation of Concerns: Each module has a single responsibility.
-
-🚀 Scalability: Easy to add new features without affecting existing ones.
-
-🧪 Testability: Domain and data logic can be unit tested in isolation.
-
-📦 Reusability: Common components and models can be reused across features.
-
-📐 Maintainability: Isolated modules reduce the risk of code conflicts.
+* Scalability: Easily extendable with new features and modules.
+*Separation of concerns: Clean boundaries between layers.
+*Reusability: Design system, utils, and components are shareable.
+*Build efficiency: Modules can be built in isolation.
 
 ### ⚠️ Disadvantages
-📁 Initial Complexity: The learning curve for beginners can be steep.
-
-🕸️ Overhead for Small Projects: Might be overkill for simple apps.
-
-⏱️ Setup Time: Setting up modules and wiring dependencies takes time.
+* Initial Complexity: The learning curve for beginners can be steep.
+* Overhead for Small Projects: Might be overkill for simple apps.
+* Setup Time: Setting up modules and wiring dependencies takes time.
 
 ### 🛠️ How to Clone and Use
 bash
