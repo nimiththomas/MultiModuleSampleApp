@@ -1,10 +1,10 @@
-## 🚀 Android Multimodule Template
+### 🚀 Android Multimodule Template
 A modular, scalable, and maintainable Android project template built using modern Android development practices. This project is intended to serve as a reference for developers exploring the multimodular approach in Android. It is not a production-ready app but a code-driven showcase of clean architecture and modularization techniques.
 
-## 📝 Description
+### 📝 Description
 This template demonstrates a fully decoupled Android app structure using Jetpack Compose, Kotlin, and modern Android development tools. The goal is to showcase a clean architecture pattern with separation of concerns, making development, testing, and scaling easier for complex Android apps.
 
-## Technologies used:
+### Technologies used:
 
 🧑‍💻 Kotlin
 
@@ -20,7 +20,7 @@ This template demonstrates a fully decoupled Android app structure using Jetpack
 
 🌒 Dark Mode Support
 
-## 🧩 Modularization Structure
+### 🧩 Modularization Structure
 plaintext
 Copy
 Edit
@@ -38,16 +38,16 @@ Edit
 |   ├── feature2/           # Feature 2 - includes screens, viewmodels, navigation
 └── app/                    # Entry point, injects features and applies theme
 
-## 📂 Layer Breakdown
+### 📂 Layer Breakdown
 
-build-logic/
+## build-logic/
 Contains custom Gradle plugins to simplify setup across modules.
 
 Centralizes build configuration (e.g., Kotlin/Compose compiler settings, dependency versions).
 
 Promotes DRY (Don't Repeat Yourself) principles for build scripts.
 
-core/
+## core/
  
 network/:Retrofit setup, API interfaces, interceptors, and network config.
 
