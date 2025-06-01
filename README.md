@@ -14,6 +14,9 @@ This template demonstrates a fully decoupled Android app structure using Jetpack
 *Dark Mode Support
 
 ### 🧩 Modularization Structure
+
+![image](https://github.com/user-attachments/assets/110b6140-6aee-427d-a602-65908733817a)
+
 ![image](https://github.com/user-attachments/assets/abd4a18c-cb91-4bba-bb90-a43ccff0143b)
 
 
