@@ -21,21 +21,18 @@ This template demonstrates a fully decoupled Android app structure using Jetpack
 🌒 Dark Mode Support
 
 ### 🧩 Modularization Structure
-plaintext
-Copy
-Edit
+
 ├── build-logic/            # Custom Gradle plugins and shared build logic
-├── core/
+├── core/                   # Central shared modules (not features)
 │   ├── datastore/          # Handles DataStore setup and access
 │   ├── network/            # Handles Retrofit, API interfaces, and interceptors
-|   ├── data/               # Repositories combining data from core modules
-|   ├── domain/             # Use cases for business logic
-|   ├── common/             # Shared model classes and common utility classes
-|   ├── designsystem/       # App-wide color palette, typography, and themes
-|   ├── uicomponents/       # Reusable composables built on top of design system
-|── feature/
-|   ├── feature1/           # Feature 1 - includes screens, viewmodels, navigation
-|   ├── feature2/           # Feature 2 - includes screens, viewmodels, navigation
+│   ├── domain/             # Business logic contracts and usecases
+│   └── common/             # Shared model classes (DTOs), utilities, constants
+├── data/                   # Repositories combining data from core modules
+├── designsystem/           # App-wide color palette, typography, and themes
+├── uicomponents/           # Reusable composables built on top of design system
+├── feature1/               # Feature 1 - screens, viewmodels, navigation
+├── feature2/               # Feature 2 - screens, viewmodels, navigation
 └── app/                    # Entry point, injects features and applies theme
 
 ### 📂 Layer Breakdown
